@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dbf12bcaa9cd34494c6a0aca6ea82f, type: 3}
+  m_Name: BulletDetailsList
+  m_EditorClassIdentifier: 
+  bulletDetails:
+  - bulletName: BulletCannon
+    bulletPrefab: {fileID: 7999571696593883550, guid: 36404c0b15e48514583c39ccd911388d,
+      type: 3}
+    force: 800
+    delay: 0.5
+  - bulletName: BulletSMG
+    bulletPrefab: {fileID: 3598488548146482210, guid: fda3077e4ecfa1a41b323ca5a4c201a5,
+      type: 3}
+    force: 1200
+    delay: 0.1
