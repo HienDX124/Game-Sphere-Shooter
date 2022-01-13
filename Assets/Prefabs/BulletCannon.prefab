@@ -50,7 +50,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,7 +71,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.13
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.13
@@ -178,7 +178,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,7 +199,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.18
+  m_Time: 0.11
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.18
@@ -306,7 +306,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,7 +327,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.16
+  m_Time: 0.09
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.22
@@ -434,7 +434,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -455,7 +455,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.21
+  m_Time: 0.14
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -562,7 +562,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed4e95c6c6f4897488488c0f0cc13fd8, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -583,7 +583,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.08
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.24730013
@@ -690,7 +690,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -711,7 +711,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.19
+  m_Time: 0.12
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.15
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 7999571696593883523}
   - component: {fileID: 1151010502751488361}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletCannon
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,7 +797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7999571696593883550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.8}
   m_Children:
   - {fileID: 2877381600707423163}
@@ -949,7 +949,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80071024e32bf144894c383d6013770b, type: 2}
+  - {fileID: 2100000, guid: b8619d89e2509b342809bc15559bfcda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -970,7 +970,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.17
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.2

@@ -11,4 +11,5 @@ public class bulletDetails
 
     public float force;
     public float delay;
+    public AudioClip shootSound;
 }

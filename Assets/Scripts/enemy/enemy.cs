@@ -10,18 +10,20 @@ public class enemy : MonoBehaviour
     public float minSpeed = 1.0f;
     public float maxSpeed = 6.0f;
 
-    float speed;
+    [HideInInspector] public float speed;
+    [HideInInspector] public float currentSpeed;
 
     GameObject player;
 
     public GameObject enemyExplosionPrefab;
 
-    AudioSource audioSource;
+    public AudioSource enemyExplosionSound;
 
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
-        audioSource = GetComponent<AudioSource>();
+        currentSpeed = speed;
+        enemyExplosionSound = GetComponent<AudioSource>();
         player = GameObject.FindWithTag(playerTag);
     }
 
@@ -29,7 +31,7 @@ public class enemy : MonoBehaviour
     {
         if (player)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, currentSpeed * Time.deltaTime);
         }
         else
         {
@@ -41,7 +43,6 @@ public class enemy : MonoBehaviour
         if (col.gameObject.CompareTag(bulletTag))
         {
             Destroy(col.gameObject);
-
             scoreManager.instance.IncreaseScore(1);
         }
         if (col.gameObject.CompareTag(playerTag) ||
@@ -53,9 +54,11 @@ public class enemy : MonoBehaviour
 
     void DestroyEnemy()
     {
+        enemyExplosionSound.Play();
+
         GameObject explosionInstance = Instantiate(enemyExplosionPrefab, transform.position, enemyExplosionPrefab.transform.rotation);
 
-        Destroy(explosionInstance, 5.0f);
+        Destroy(explosionInstance, 2.0f);
 
         Transform trailRenderer = transform.GetChild(0);
 
@@ -64,7 +67,6 @@ public class enemy : MonoBehaviour
             trailRenderer.parent = null;
             Destroy(trailRenderer.gameObject, trailRenderer.GetComponent<TrailRenderer>().time);
         }
-        audioSource.Play();
         Destroy(this.gameObject);
     }
 }

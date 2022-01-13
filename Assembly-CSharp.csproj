@@ -36,9 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Artillery Tank\Demo Scene\CameraController.cs" />
+     <Compile Include="Assets\Imported Assets\Artillery Tank\Demo Scene\CameraController.cs" />
      <Compile Include="Assets\Scripts\Misc\destroyer.cs" />
      <Compile Include="Assets\Scripts\Misc\scoreManager.cs" />
+     <Compile Include="Assets\Scripts\UI\panelSlideManager.cs" />
+     <Compile Include="Assets\Scripts\UI\utilityScript.cs" />
      <Compile Include="Assets\Scripts\bullet\SO_bulletDetailsList.cs" />
      <Compile Include="Assets\Scripts\bullet\bulletDetails.cs" />
      <Compile Include="Assets\Scripts\bullet\bulletSystem.cs" />
@@ -47,7 +49,7 @@
      <Compile Include="Assets\Scripts\gun\GunManager.cs" />
      <Compile Include="Assets\Scripts\player\cameraFollow.cs" />
      <Compile Include="Assets\Scripts\player\playerMovement.cs" />
-     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+     <None Include="Assets\Imported Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -588,14 +590,6 @@
       <Project>{9f4de6d4-def3-2f33-bbdc-7d3457a0f934}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="SimpleInput.Runtime.csproj">
-      <Project>{b2a0b6ad-674a-70a1-861c-135d8be4865c}</Project>
-      <Name>SimpleInput.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="SimpleInput.Editor.csproj">
-      <Project>{261fc352-e6fd-c1d5-eeff-99aad8bc79dc}</Project>
-      <Name>SimpleInput.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{dd5ddbbd-fe5a-5d64-fd83-c658fa15e458}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
@@ -651,6 +645,14 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{5e86e3c4-d0e8-44cc-ce76-38442c85e3cb}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleInput.Runtime.csproj">
+      <Project>{b2a0b6ad-674a-70a1-861c-135d8be4865c}</Project>
+      <Name>SimpleInput.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleInput.Editor.csproj">
+      <Project>{261fc352-e6fd-c1d5-eeff-99aad8bc79dc}</Project>
+      <Name>SimpleInput.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

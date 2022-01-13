@@ -16,7 +16,7 @@ public class bulletSystem : MonoBehaviour
     private bulletDetails bullet;
 
     float currentTime;
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -37,11 +37,14 @@ public class bulletSystem : MonoBehaviour
             gunActive = GunManager.instance.gun2;
             bullet = so_BulletDetailsList.GetBulletDetailsByName("BulletSMG");
         }
+        audioSource.clip = bullet.shootSound;
+
     }
 
     void FixedUpdate()
     {
         SetBulletDetails();
+
         if (((Mathf.Abs(SimpleInput.GetAxisRaw("MouseX")) > 0.75f) ||
              (Mathf.Abs(SimpleInput.GetAxisRaw("MouseY")) > 0.75f)) &&
         ((Time.time - currentTime > bullet.delay) || (currentTime < 0.01f)))

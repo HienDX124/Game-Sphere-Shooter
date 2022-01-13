@@ -21,7 +21,12 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        MovePlayerJoystick();
+        RotateTurretJoystick();
+    }
 
+    private void MovePlayerJoystick()
+    {
         if (GetInput("Horizontal", "Vertical") && (moveJoystick.xAxis.value != 0 || moveJoystick.yAxis.value != 0))
         {
             MovePlayer();
@@ -30,11 +35,37 @@ public class playerMovement : MonoBehaviour
         {
             StopMovePlayer();
         }
+    }
 
+    private void MovePlayerKeyboard()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            cubeRb.velocity = Vector3.Normalize(new Vector3(-input.x * speed, 0, 0));
+        }
+    }
+
+    private void MovePlayer()
+    {
+        cubeRb.velocity = Vector3.Normalize(new Vector3(input.x, 0, input.y)) * speed;
+    }
+
+    private void StopMovePlayer()
+    {
+        cubeRb.velocity = Vector3.zero;
+    }
+
+    private void RotateTurretJoystick()
+    {
         if (GetInput("MouseX", "MouseY"))
         {
             RotateTurret();
         }
+    }
+
+    private void RotateTurret()
+    {
+        rotator.eulerAngles = new Vector3(0, Mathf.Atan2(input.x, input.y) * 180 / Mathf.PI, 0);
     }
 
     bool GetInput(string horizontal, string vertical)
@@ -45,18 +76,4 @@ public class playerMovement : MonoBehaviour
         return (Mathf.Abs(input.x) > 0.01f) || (Mathf.Abs(input.y) > 0.01f);
     }
 
-    void StopMovePlayer()
-    {
-        cubeRb.velocity = Vector3.zero;
-    }
-
-    void MovePlayer()
-    {
-        cubeRb.velocity = Vector3.Normalize(new Vector3(input.x, 0, input.y)) * speed;
-    }
-
-    void RotateTurret()
-    {
-        rotator.eulerAngles = new Vector3(0, Mathf.Atan2(input.x, input.y) * 180 / Mathf.PI, 0);
-    }
 }

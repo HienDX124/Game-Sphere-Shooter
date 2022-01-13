@@ -18,8 +18,10 @@ MonoBehaviour:
       type: 3}
     force: 800
     delay: 0.5
+    shootSound: {fileID: 8300000, guid: 0f330499c20e4dc489fe7bef31c34546, type: 3}
   - bulletName: BulletSMG
     bulletPrefab: {fileID: 3598488548146482210, guid: fda3077e4ecfa1a41b323ca5a4c201a5,
       type: 3}
     force: 1200
     delay: 0.1
+    shootSound: {fileID: 8300000, guid: f2b03af789e43c846bfe1ac088621c14, type: 3}
