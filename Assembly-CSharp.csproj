@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Imported Assets\Artillery Tank\Demo Scene\CameraController.cs" />
      <Compile Include="Assets\Scripts\Misc\destroyer.cs" />
+     <Compile Include="Assets\Scripts\Misc\highScoreSaver.cs" />
      <Compile Include="Assets\Scripts\Misc\scoreManager.cs" />
      <Compile Include="Assets\Scripts\UI\panelSlideManager.cs" />
      <Compile Include="Assets\Scripts\UI\utilityScript.cs" />
@@ -48,6 +49,7 @@
      <Compile Include="Assets\Scripts\enemy\enemySpawner.cs" />
      <Compile Include="Assets\Scripts\gun\GunManager.cs" />
      <Compile Include="Assets\Scripts\player\cameraFollow.cs" />
+     <Compile Include="Assets\Scripts\player\healthManager.cs" />
      <Compile Include="Assets\Scripts\player\playerMovement.cs" />
      <None Include="Assets\Imported Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <Reference Include="UnityEngine">

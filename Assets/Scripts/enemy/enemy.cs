@@ -45,10 +45,16 @@ public class enemy : MonoBehaviour
             Destroy(col.gameObject);
             scoreManager.instance.IncreaseScore(1);
         }
-        if (col.gameObject.CompareTag(playerTag) ||
-            col.gameObject.CompareTag(bulletTag))
+        if (col.gameObject.CompareTag(playerTag)
+         || col.gameObject.CompareTag(bulletTag)
+            )
         {
             DestroyEnemy();
+        }
+
+        if (col.gameObject.CompareTag(playerTag))
+        {
+            healthManager.instance.ChangeHealth(-1);
         }
     }
 
