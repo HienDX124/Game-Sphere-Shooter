@@ -17,6 +17,4 @@ public class panelSlideManager : MonoBehaviour
         isShowingPausePanel = !isShowingPausePanel;
         pausePanelAnimator.SetBool("show", isShowingPausePanel);
     }
-
-
 }
