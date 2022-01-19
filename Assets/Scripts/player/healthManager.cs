@@ -46,9 +46,8 @@ public class healthManager : MonoBehaviour
         int yourScoreValue = scoreManager.instance.GetCurrentScore();
         int highScoreValue = highScoreSaver.instance.GetHighScore();
 
-
         healthText.text = "Health: 0";
-        Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
+        GameObject instaceExplosion = Instantiate(explosionPrefab, transform.position, explosionPrefab.transform.rotation);
 
         // Destroy(this.gameObject);
 
@@ -65,7 +64,8 @@ public class healthManager : MonoBehaviour
             highScoreSaver.instance.UpdateNewHighScore(yourScoreValue);
         }
 
-        Destroy(explosionPrefab, 3.0f);
-    }
+        Destroy(instaceExplosion, 3.0f);
 
+        StartCoroutine(utilityScript.instance.FreezeGameTimeRoutine(2f));
+    }
 }

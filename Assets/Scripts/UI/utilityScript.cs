@@ -17,6 +17,7 @@ public class utilityScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        UnFreezeGameTime();
     }
 
     public void Quit()
@@ -59,5 +60,21 @@ public class utilityScript : MonoBehaviour
             enemy enemyComponent = enemiesGO[i].GetComponent<enemy>();
             enemyComponent.currentSpeed = enemyComponent.speed;
         }
+    }
+
+    public void FreezeGameTime()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public IEnumerator FreezeGameTimeRoutine(float secondsDelay)
+    {
+        yield return new WaitForSeconds(secondsDelay);
+        FreezeGameTime();
+    }
+
+    public void UnFreezeGameTime()
+    {
+        Time.timeScale = 1f;
     }
 }
